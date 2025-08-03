@@ -6,8 +6,8 @@ import type { Route } from './+types/home';
 import { PauseCircleIcon, PlayCircleIcon } from 'lucide-react';
 import {
   Card,
-  CardAction,
   CardContent,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '~/components/ui/card';
@@ -95,7 +95,7 @@ export default function Home() {
               <CardTitle>{post.title}</CardTitle>
             </CardHeader>
             <CardContent>{post.content}</CardContent>
-            <CardAction className={'w-full'}>
+            <CardFooter className={'w-full'}>
               <Button
                 className={cn(
                   'w-full',
@@ -128,7 +128,7 @@ export default function Home() {
                 {/* Button label */}
                 {isSpeaking ? 'Stop' : 'Speak'}
               </Button>
-            </CardAction>
+            </CardFooter>
           </Card>
         ))}
       </section>
