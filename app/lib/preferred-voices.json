@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Microsoft David - English (United States)",
+    "lang": "en-US",
+    "voiceURI": "Microsoft David - English (United States)",
+    "default": true,
+    "localService": true
+  },
+  {
+    "name": "Microsoft Mark - English (United States)",
+    "lang": "en-US",
+    "voiceURI": "Microsoft Mark - English (United States)",
+    "default": false,
+    "localService": true
+  },
+  {
+    "name": "Microsoft Zira - English (United States)",
+    "lang": "en-US",
+    "voiceURI": "Microsoft Zira - English (United States)",
+    "default": false,
+    "localService": true
+  },
+  {
+    "name": "Google Deutsch",
+    "lang": "de-DE",
+    "voiceURI": "Google Deutsch",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google US English",
+    "lang": "en-US",
+    "voiceURI": "Google US English",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google UK English Female",
+    "lang": "en-GB",
+    "voiceURI": "Google UK English Female",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google UK English Male",
+    "lang": "en-GB",
+    "voiceURI": "Google UK English Male",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google español",
+    "lang": "es-ES",
+    "voiceURI": "Google español",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google español de Estados Unidos",
+    "lang": "es-US",
+    "voiceURI": "Google español de Estados Unidos",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google français",
+    "lang": "fr-FR",
+    "voiceURI": "Google français",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google हिन्दी",
+    "lang": "hi-IN",
+    "voiceURI": "Google हिन्दी",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google Bahasa Indonesia",
+    "lang": "id-ID",
+    "voiceURI": "Google Bahasa Indonesia",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google italiano",
+    "lang": "it-IT",
+    "voiceURI": "Google italiano",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google 日本語",
+    "lang": "ja-JP",
+    "voiceURI": "Google 日本語",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google 한국의",
+    "lang": "ko-KR",
+    "voiceURI": "Google 한국의",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google Nederlands",
+    "lang": "nl-NL",
+    "voiceURI": "Google Nederlands",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google polski",
+    "lang": "pl-PL",
+    "voiceURI": "Google polski",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google português do Brasil",
+    "lang": "pt-BR",
+    "voiceURI": "Google português do Brasil",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google русский",
+    "lang": "ru-RU",
+    "voiceURI": "Google русский",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google 普通话（中国大陆）",
+    "lang": "zh-CN",
+    "voiceURI": "Google 普通话（中国大陆）",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google 粤語（香港）",
+    "lang": "zh-HK",
+    "voiceURI": "Google 粤語（香港）",
+    "default": false,
+    "localService": false
+  },
+  {
+    "name": "Google 國語（臺灣）",
+    "lang": "zh-TW",
+    "voiceURI": "Google 國語（臺灣）",
+    "default": false,
+    "localService": false
+  }
+]
