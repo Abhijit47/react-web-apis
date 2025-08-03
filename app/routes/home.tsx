@@ -89,49 +89,102 @@ export default function Home() {
       </DropdownMenu>
       <section className={'text-center'}>
         <h1 className={'text-3xl text-center font-semibold'}>React Article</h1>
-        {posts.map((post) => (
-          <Card key={post.id} className='my-4'>
-            <CardHeader>
-              <CardTitle>{post.title}</CardTitle>
-            </CardHeader>
-            <CardContent>{post.content}</CardContent>
-            <CardFooter className={'w-full'}>
-              <Button
-                className={cn(
-                  'w-full',
-                  isSpeaking
-                    ? 'bg-red-500 text-white'
-                    : 'bg-blue-500 text-white'
-                )}
-                onClick={
-                  isSpeaking
-                    ? onStopSpeaking
-                    : () => onStartSpeaking(JSON.stringify(post.content))
-                }
-                type='button'
-                aria-pressed={isSpeaking}
-                aria-label={isSpeaking ? 'Stop reading' : 'Play reading'}>
-                {/* Icon: Play when idle, Stop when speaking */}
-                <span
-                  aria-hidden='true'
-                  style={{
-                    marginRight: '0.5em',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                  }}>
-                  {isSpeaking ? (
-                    <PlayCircleIcon className={'size-4'} />
-                  ) : (
-                    <PauseCircleIcon className={'size-4'} />
-                  )}
-                </span>
-                {/* Button label */}
-                {isSpeaking ? 'Stop' : 'Speak'}
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
+        <PostsCards />
       </section>
     </main>
+  );
+}
+
+type Post = {
+  id: string;
+  title: string;
+  content: string;
+};
+
+const posts = [
+  {
+    id: '1',
+    title: 'Welcome to Remix',
+    content: 'This is a simple example of a Remix application.',
+  },
+  {
+    id: '2',
+    title: 'Understanding Remix',
+    content: 'Remix is a modern React framework for building web applications.',
+  },
+  {
+    id: '3',
+    title: 'Getting Started with Remix',
+    content:
+      'To get started with Remix, you can follow the official documentation.',
+  },
+  {
+    id: '4',
+    title: 'Advanced Remix Features',
+    content:
+      'Remix offers advanced features like data loading, caching, and more.',
+  },
+];
+function PostsCards() {
+  return (
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+      {posts.map((post) => (
+        <PostCard key={post.id} post={post} />
+      ))}
+    </div>
+  );
+}
+
+function PostCard({ post }: { post: Post }) {
+  const {
+    voices,
+    selectedVoice,
+    onChangeVoice,
+    isSpeaking,
+    onStartSpeaking,
+    onStopSpeaking,
+    isTransition,
+  } = useSpeechSynthesis();
+
+  return (
+    <Card key={post.id} className='my-4'>
+      <CardHeader>
+        <CardTitle>{post.title}</CardTitle>
+      </CardHeader>
+      <CardContent>{post.content}</CardContent>
+      <CardFooter className={'w-full'}>
+        <Button
+          disabled={isTransition}
+          className={cn(
+            'w-full',
+            isSpeaking ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'
+          )}
+          onClick={
+            isSpeaking
+              ? onStopSpeaking
+              : () => onStartSpeaking(JSON.stringify(post.content))
+          }
+          type='button'
+          aria-pressed={isSpeaking}
+          aria-label={isSpeaking ? 'Stop reading' : 'Play reading'}>
+          {/* Icon: Play when idle, Stop when speaking */}
+          <span
+            aria-hidden='true'
+            style={{
+              marginRight: '0.5em',
+              display: 'inline-flex',
+              alignItems: 'center',
+            }}>
+            {isSpeaking ? (
+              <PlayCircleIcon className={'size-4'} />
+            ) : (
+              <PauseCircleIcon className={'size-4'} />
+            )}
+          </span>
+          {/* Button label */}
+          {isSpeaking ? 'Stop' : 'Speak'}
+        </Button>
+      </CardFooter>
+    </Card>
   );
 }
